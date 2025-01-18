@@ -1,5 +1,6 @@
 import numpy as np
 from simulation import sim
+# from plot import plot_power_profiles, plot_capacity_dynamic
 
 def main():
     # Simulation parameters
@@ -11,6 +12,8 @@ def main():
 
     # Run simulation
     final_capacity, sim_data = sim(velocities, DISC, INTER, STAGE_SYMBOL, CURRENT_D)
+
+    # plot_power_profiles(velocities, INTER, sim_data, plot_solar=True, plot_rolling=True, plot_drag=True, plot_gradient=True, plot_capacity=True)
     print(final_capacity)
 
     ## Run optimization (THIS DOESN"T WORK RN)
